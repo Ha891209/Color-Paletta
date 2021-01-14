@@ -1,0 +1,19 @@
+/* Error: @use rules must be written before any other rules.
+ *    ,
+ * 43 | }@use "sass:color";
+ *    |  ^^^^^^^^^^^^^^^^^
+ *    '
+ *   scss\mixins\_backgrounds.scss 43:2  @use
+ *   scss\commons\_backgrounds.scss 2:1  @use
+ *   scss\css\style.scss 2:1             root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: @use rules must be written before any other rules.\a    \2577 \a 43 \2502  }@use "sass:color";\d\a    \2502   ^^^^^^^^^^^^^^^^^\a    \2575 \a   scss\\mixins\\_backgrounds.scss 43:2  @use\a   scss\\commons\\_backgrounds.scss 2:1  @use\a   scss\\css\\style.scss 2:1             root stylesheet';
+}

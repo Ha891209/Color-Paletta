@@ -1,17 +1,11 @@
-  
 @use "../variables/colors";
-@use "get-keys";
+@use "get-keys" as *;
 @use "sass:map";
-@use "sass:list";
 
 @function var($string, $data: colors.$colors) {
-    $keys: get-keys.get-keys($string);
-
+    $keys: get-keys($string);
     @each $key in $keys {
         $data: map.get($data, $key);
     }
-
     @return $data;
 }
-
-;

@@ -1,5 +1,5 @@
 @use "var.scss" as *;
-​
+
 @function get-default-theme(){
     @return var(themes-#{var(defaultTheme)});
 }
