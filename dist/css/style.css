@@ -1,9 +1,9 @@
-/* Error: expected ";".
+/* Error: $map1: null is not a map.
  *    ,
- * 11 |   @include texts.generate-colored-texts(map.merge(var(theme), var(base))));
- *    |                                                                          ^
+ * 11 | @include texts.generate-colored-texts(map.merge(var(theme), var(base)));
+ *    |                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  *    '
- *   scss\commons\_texts.scss 11:74  @use
+ *   scss\commons\_texts.scss 11:39  @use
  *   scss\css\style.scss 1:1         root stylesheet */
 
 body::before {
@@ -14,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: expected ";".\a    \2577 \a 11 \2502    @include texts.generate-colored-texts(map.merge(var(theme), var(base))));\a    \2502                                                                           ^\a    \2575 \a   scss\\commons\\_texts.scss 11:74  @use\a   scss\\css\\style.scss 1:1         root stylesheet';
+  content: "Error: $map1: null is not a map.\a    \2577 \a 11 \2502  @include texts.generate-colored-texts(map.merge(var(theme), var(base)));\a    \2502                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   scss\\commons\\_texts.scss 11:39  @use\a   scss\\css\\style.scss 1:1         root stylesheet";
 }
