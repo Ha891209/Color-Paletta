@@ -1,7 +1,9 @@
-@mixin generate-colored-texts($palette) {
+@use "sass:map";
+
+@mixin generate-colored-texts($main-palette) {
 
     @each $key,
-    $value in $palette {
+    $value in $main-palette {
         .text--#{"" + $key} {
             color: $value;
         }
